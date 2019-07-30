@@ -15,7 +15,7 @@ class PhotoUploadView(CreateView): #사진 업로드
     template_name = 'photo/upload.html'
 
     def form_valid(self, form): #업로드 이후 이동할 페이지를 호출
-        form.instance.author_id = self.request.uer.id
+        form.instance.author_id = self.request.user.id
         if form.is_valid():
             form.instance.save()
             return redirect('/')

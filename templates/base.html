@@ -20,10 +20,10 @@
                         {% if user.is_authenticated %} <!--로그인 했을 때와 아닐 때의 화면 차이-->
                         <li class="nav-item"><a href="#" class="nav-link">Welcome, {{user.get_username}}</a></li>
                         <li class="nav-item"><a href="{% url 'photo:photo_upload' %}" class="nav-link">Upload</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Logout</a></li>
+                        <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</a></li>
                         {% else %}
-                        <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Signup</a></li>
+                        <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Login</a></li>
+                        <li class="nav-item"><a href="{% url 'register' %}" class="nav-link">Signup</a></li>
                         {% endif %}
                     </ul>
                 </nav>

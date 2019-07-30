@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'photo',
+    'photo', #사진업로드
+    'accounts', #계정
 ]
 
 MIDDLEWARE = [
@@ -124,3 +125,6 @@ STATIC_URL = '/static/'
 # 각 앱에서 업로드 하는 파일들을 한 폴더를 중심으로 모으기 위해 설정
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 로그인 후 이동할 페이지 설정(메인)
+LOGIN_REDIRECT_URL = '/'
