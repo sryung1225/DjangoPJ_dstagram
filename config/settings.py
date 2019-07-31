@@ -25,7 +25,7 @@ SECRET_KEY = 'h&to0u@ja$)yidtzyd#6_uabx=*qe_wq(((_o9tlv31%x=-&!g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] # 괄호 안에 '*' 안 넣었을 때 pythonanywhere에서 오류 발생했었음
 
 
 # Application definition
