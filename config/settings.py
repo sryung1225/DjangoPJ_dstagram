@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photo', #사진업로드
     'accounts', #계정
+    'disqus',
+    'django.contrib.sites', #댓글달기
 ]
 
 MIDDLEWARE = [
@@ -128,3 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 로그인 후 이동할 페이지 설정(메인)
 LOGIN_REDIRECT_URL = '/'
+
+# 댓글달기 (disqus) 사이트 설정
+DISQUS_WEBSITE_SHORTNAME = 'dstagram-sryung'
+SITE_ID = 1
